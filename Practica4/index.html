@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Practica con JavaScript</title>
+		<style>
+
+			/* Basic CSS comment */
+			body {
+				background: black;
+				color: white;
+				width: 960px;
+				margin: 0 auto;
+				font-size: 30px;
+				color: black;
+			}
+
+			h1 {
+
+				font-size: 80px;
+				color: green;
+			}
+
+			a {
+				font-size: 40px;
+				color: blue;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<h1>Quieres hackear la NASA Hijo?</h1>
+		<a href="#" class="activate">Simon</a>
+		<a href="#" class="return">Regresate mijo</a>
+
+		<script type="text/javascript">
+			
+			/*The Javascript code*/
+			var text = document.querySelector("h1");
+
+			/*Makin sure everything works*/
+			console.log("Everything ok boi");
+
+			var a = document.querySelector(".activate");
+			
+			/*Crear un Evento*/
+			a.addEventListener('click',function(){
+			
+				/*Cambia el texto en la etiqueta especificada en el objeto*/
+				text.innerHTML = "Hackeado";
+				
+				alert("Ya estas adentro hijo");
+				console.log("Ya hakiaste la NASA amigo");
+
+				a.innerHTML = "Listo";
+			});
+
+			var ret = document.getElementsByClassName('return');
+
+			ret[0].addEventListener('click', function(){
+				text.innerHTML = "Quieres hackear la NASA Hijo?";
+				console.log("Regresaste en el tiempo hijo");
+			});
+
+		</script>
+	</body>
+</html>

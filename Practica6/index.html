@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Practica con JavaScript #3 </title>
+		<style>
+
+			/* Basic CSS comment */
+			#container{
+				position: absolute; 
+				left: 20px; 
+				top: 20px; 
+				height: 500px; 
+				width: 500px; 
+				border: 3px solid #CCC; 
+				background-color: #FFF;
+			}
+		
+			.box{	
+				float: left; 
+				width: 75px; 
+				height: 100px;
+				margin: 10px;
+				background: #FFF url('http://placekitten.com/g/75/100/') no-repeat;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+
+		</div>
+
+		<script type="text/javascript">
+			
+			var x;
+
+			for (var i = 0; i < 20; i++) {
+				setTimeout(function(){
+					var box = document.createElement('div');
+					box.className = 'box';
+					console.log(box);
+					document.getElementById('container').appendChild(box);
+				},500*i);
+			}
+			alert("Que bonito gato");
+
+			
+		</script>
+	</body>
+</html>

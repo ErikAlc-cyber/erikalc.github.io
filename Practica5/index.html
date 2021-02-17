@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Practica con JavaScript #2</title>
+		<style>
+
+			/* Basic CSS code  */
+			body {
+				background: white;
+				color: black;
+				text-align: center;
+				width: 960px;
+				margin: 0 auto;
+				font-size: 40px;
+				color: black;
+			}
+
+			h1 {
+
+				font-size: 60px;
+				color: red;
+			}
+
+			a {
+				font-size: 40px;
+				color: green;
+			}
+
+			h2 {
+				font-size: 60px;
+				color: blue;	
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<h1>Calculadora en linea</h1>
+
+		<table class="Operaciones" align="center">
+			<tr>
+				<td><a href="#" id="suma">Suma</a></td>
+				<td><a href="#" id="resta">Resta</a></td>
+				<td><a href="#" id="division">Division</a></td>
+				<td><a href="#" id="multi">Multiplicacion</a></td>
+			</tr>
+		</table>
+		<h2 id="result">Resultado</h2>
+
+		<script type="text/javascript">
+			
+			/*The Javascript code*/
+
+			/*Crear una funcion*/
+			function sum(a,b){
+				res = (a+b);
+				console.log("ok es " + res);
+
+				var resu = document.getElementById("result");
+				resu.innerHTML = res;
+			}
+
+			function rest(a,b){
+				res = (a-b);
+				console.log("ok es " + res);
+
+				var resu = document.getElementById("result");
+				resu.innerHTML = res;
+			}
+
+			function mul(a,b){
+				res = (a*b);
+				console.log("ok es " + res);
+
+				var resu = document.getElementById("result");
+				resu.innerHTML = res;
+			}
+
+			function div(a,b){
+				res = (a/b);
+				console.log("ok es " + res);
+
+				var resu = document.getElementById("result");
+				resu.innerHTML = res;
+			}
+
+			/*Makin sure everything works*/
+			console.log("Everything ok");
+
+			/*Crear objeto*/
+			var suma = document.getElementById("suma");
+			var resta = document.getElementById("resta");
+			var divicion = document.getElementById("division");
+			var multiplicacion = document.getElementById("multi");
+
+			console.log("Todo correcto aqui joven");
+			
+			/*Crear un Evento*/
+			suma.addEventListener('click',function(){
+
+				/*Obtener los numeros del usuario por prompts*/
+				var c = prompt("Numero 1:");
+				var d = prompt("Numero 2:");
+
+				/*Pasar los prompts a float*/
+				c = parseFloat(c);
+				d = parseFloat(d); 
+
+				/*Registrar el tipo de datos que son*/
+				console.log(typeof c);
+				console.log(typeof d);
+				
+				/*Crea un pop-up*/
+				alert("Se hizo una suma");
+
+				sum(c,d);
+
+				console.log("Ya termino la operacion");
+			});
+
+			resta.addEventListener('click',function(){
+			
+				/*Obtener los numeros del usuario por prompts*/
+				var c = prompt("Numero 1:");
+				var d = prompt("Numero 2:");
+
+				/*Pasar los prompts a float*/
+				c = parseFloat(c);
+				d = parseFloat(d); 
+
+				/*Registrar el tipo de datos que son*/
+				console.log(typeof c);
+				console.log(typeof d);
+				
+				/*Crea un pop-up*/
+				alert("Se hizo una Resta");
+
+				rest(c,d);
+
+				console.log("Ya termino la operacion");
+			});
+
+			divicion.addEventListener('click',function(){
+
+				/*Obtener los numeros del usuario por prompts*/
+				var c = prompt("Numero 1:");
+				var d = prompt("Numero 2:");
+
+				/*Pasar los prompts a float*/
+				c = parseFloat(c);
+				d = parseFloat(d); 
+
+				/*Registrar el tipo de datos que son*/
+				console.log(typeof c);
+				console.log(typeof d);
+				
+				/*Crea un pop-up*/
+				alert("Se hizo una Division");
+
+				div(c,d);
+
+				console.log("Ya termino la operacion");
+			});
+
+			multiplicacion.addEventListener('click',function(){
+
+
+				/*Obtener los numeros del usuario por prompts*/
+				var c = prompt("Numero 1:");
+				var d = prompt("Numero 2:");
+
+				/*Pasar los prompts a float*/
+				c = parseFloat(c);
+				d = parseFloat(d); 
+
+				/*Registrar el tipo de datos que son*/
+				console.log(typeof c);
+				console.log(typeof d);
+				
+				/*Crea un pop-up*/
+				alert("Se hizo una Multiplicacion");
+
+				mul(c,d);
+
+				console.log("Ya termino la operacion");
+			});
+
+		</script>
+	</body>
+</html>

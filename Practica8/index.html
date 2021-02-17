@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>K-j negra</title>
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+    <link rel='stylesheet' href='styles/main.css'>
+    <link rel="icon" href="../Imagenes/kjnegra.png" />
+    <audio id="audio" controls>
+    <source type="audio/wav" src="..\Audios\nyan.mp3">
+    </audio>
+
+</head>
+<body id="soundcloud-player">
+
+<div class="ui container col">
+    <div class="col-left js-playlist">
+        <div class="inner"></div>
+    </div>
+    <div class="col-right">
+        <div class="main">
+            <div class="ui massive icon input">
+                <input type="text" placeholder="Search for a song or artist..." class="js-search input-search" id="searchbar">
+                <i class="search icon js-submit"></i>
+                <img src="../Imagenes/refresh.png" class="js-refresh" height="54.104" width="54.104">
+            </div>
+
+            <div class="search-results js-search-results ui cards" id="searchres">
+                
+                
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='javascript/semantic.min.js'></script>
+<script src="javascript/main.js"></script>
+<script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+</body>
+</html>
